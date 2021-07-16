@@ -1,1 +1,12 @@
-<button (click)="test()">Test button!</button>
+<div>
+    <div>
+        <p>Name</p>
+        <input #name/>
+    </div>
+
+    <div>
+        <p>Password</p>
+        <input #pw/>
+    </div>
+    <button (click)="test(name.value, pw.value)">Test button!</button>
+</div>
