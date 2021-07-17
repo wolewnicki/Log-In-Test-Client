@@ -12,6 +12,8 @@ export class TestComponent implements OnInit {
 
   test(name: string, pw: string) {
     console.log(name, pw)
+    this.http.post("http://localhost:4999/v1/test", {name: name, pwhash: pw, email: "email"})
+        .subscribe(x => console.log(x))
   }
  
 
